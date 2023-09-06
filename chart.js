@@ -14,7 +14,7 @@ async function drawLineChart() {
 
   let dimensions = {
     width: window.innerWidth*0.9, 
-    height: 400, 
+    height: 600, 
     margins :{
       top: 15, 
       right: 15, 
@@ -84,6 +84,16 @@ async function drawLineChart() {
 
   const yAxis = bounds.append("g")
       .call(yAxisGenerator)
+      .style("font-size", 15)
+
+  const yAxisLabel = yAxis.append("text")
+      .attr("x", -dimensions.boundedHeight / 2)
+      .attr("y", -dimensions.margins.left + 20)
+      .attr("fill", "black")
+      .style("font-size", "1.2em")
+      .html("Maximum Temperature")
+      .style("transform", "rotate(-90deg)")
+      .style("text-anchor", "middle")
 
   const xAxisGenerator = d3.axisBottom()
       .scale(xScale)
@@ -93,7 +103,7 @@ async function drawLineChart() {
       .style("transform", `translateY(${
         dimensions.boundedHeight
       }px)`)
-      
+      .style("font-size", 15)
 
 }
 

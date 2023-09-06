@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+
+.intro {
+    margin-right: 15%; 
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+
+.intro h1 {
+    font-family: Tinos;
+    font-size: 48px;
+    text-align: center;
+    
+}
+
+#wrapper {
+    margin-left: 3.5% ;
+}
